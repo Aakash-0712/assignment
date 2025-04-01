@@ -1,0 +1,58 @@
+Module 1 – Core Java
+
+Assignment 1. Introduction to Java
+
+  Theory:
+o History of Java
+o Features of Java (Platform Independent, Object-Oriented, etc.)
+o Understanding JVM, JRE, and JDK
+o Setting up the Java environment and IDE (e.g., Eclipse, IntelliJ)
+o Java Program Structure (Packages, Classes, Methods)
+
+  Lab Exercise:
+o Install JDK and set up environment variables.
+  Download Java 21 setup from browser and install it on system using it.
+  	To set environment variables search in start menu "Advanced System Settings" in that click on "Environment Variables" and select "system variable"->"Path"->new 	and enter variable name "java_path" and add path. 
+ 	And if already exist then select variable and click on Edit button and add new path.
+
+
+LE 1. Write a simple "Hello World" Java program. 
+
+ANS: 
+	In Eclipse IDE Create new Simple Java Project,	
+	And in that in src directory create new package called com.tcs and in this package create new class called HelloWorld.
+
+	OR
+
+	In Notepad Create Simple .Java file and Write Code for HelloWorld Program As below.
+
+Code :
+
+//This line is for Eclipse IDE
+package com.tcs;
+
+public class HelloWorld {
+	
+	public void display() {
+		System.out.println("Welcome Aakash!");
+	}
+
+	public static void main(String[] args) {
+	
+		
+		System.out.println("Hello World!");
+		
+		HelloWorld ob = new HelloWorld();
+		ob.display();
+	}
+
+}
+
+o Compile and run the program using command-line tools (javac, java).
+ANS :
+
+C:\Users\shree\OneDrive\Desktop\Java_Programms>javac HelloWorld.java
+
+C:\Users\shree\OneDrive\Desktop\Java_Programms>java HelloWorld
+Hello World!
+Welcome Aakash!
