@@ -3,56 +3,119 @@ Module 1 – Core Java
 Assignment 1. Introduction to Java
 
   Theory:
-o History of Java
-o Features of Java (Platform Independent, Object-Oriented, etc.)
+Q1. History of Java
+ANS :Java's history began in 1991 at Sun Microsystems with James Gosling and a team, initially focused on consumer electronics, later shifting to the internet, and officially launched as Java 1.0 in 1995, becoming a popular platform-independent language. 
+ 
+
+Q2. Features of Java (Platform Independent, Object-Oriented, etc.)
+ANS :
+
 o Understanding JVM, JRE, and JDK
+
+Java Virtual Machine (JVM):
+	The JVM is an abstract machine that executes Java bytecode. 
+	It acts as an interpreter between the Java programming language and the underlying hardware. 
+	It provides a runtime environment for Java applications to run on different platforms and operating systems. 
+	The JVM is a core component of both JRE and JDK. 
+
+Java Runtime Environment (JRE):
+	The JRE is a software package that provides the necessary environment for running Java applications. 
+	It includes the JVM, Java class libraries, and other components required for execution. 
+	If you need to run Java programs but not develop them, you need the JRE. 
+
+Java Development Kit (JDK):
+	The JDK is a software development kit used to develop Java applications. 
+	It includes the JRE, along with tools for compiling, debugging, and documenting Java code (e.g., Java compiler, debugger, documentation 	generator). 
+	If you want to develop Java applications, you need the JDK. 
+
+Relationship:
+	The JDK contains the JRE, and the JRE contains the JVM. 
+	You can think of it as a hierarchy: JDK > JRE > JVM. 
+	The JVM is the foundation, the JRE provides the runtime environment, and the JDK provides the tools for building and running Java 		applications. 
+
 o Setting up the Java environment and IDE (e.g., Eclipse, IntelliJ)
+	Download installation setup for eclipse And install it using this setup.
+ 
+
 o Java Program Structure (Packages, Classes, Methods)
 
-  Lab Exercise:
-o Install JDK and set up environment variables.
-  Download Java 21 setup from browser and install it on system using it.
-  	To set environment variables search in start menu "Advanced System Settings" in that click on "Environment Variables" and select "system variable"->"Path"->new 	and enter variable name "java_path" and add path. 
- 	And if already exist then select variable and click on Edit button and add new path.
+Packages:
+Purpose: Packages group related classes and interfaces to prevent naming conflicts and organize code. 
+Structure: Think of packages as folders in a file system, where each folder can contain multiple files (classes). 
+	   Example: The java.util package contains utility classes like ArrayList and HashMap. 
+Access:To use a class from a package, you either fully qualify the class name(e.g., java.util.ArrayList) or import the package or specific class. 
+
+Classes:
+Purpose: A class is a blueprint for creating objects, encapsulating data (fields/attributes) and behavior (methods).
+Structure: A class declaration defines the structure and behavior of objects created from it.
+	   Example: A Dog class could have fields like name and breed, and methods like bark() and eat().
+Objects: Objects are instances of a class, meaning they are created based on the class definition. 
+
+Methods:
+Purpose: Methods define the actions that an object can perform or the operations that can be performed on an object's data.
+Structure: Methods are blocks of code within a class that perform specific tasks.	
+	   Example: In the Dog class, a method like bark() would define the action of a dog barking.
+Access: Methods can be accessed using the object's name followed by a dot and the method name (e.g., myDog.bark()). 
 
 
-LE 1. Write a simple "Hello World" Java program. 
+Core Features:
 
-ANS: 
-	In Eclipse IDE Create new Simple Java Project,	
-	And in that in src directory create new package called com.tcs and in this package create new class called HelloWorld.
+Object-Oriented : Java is built on the principles of object-oriented programming (OOP), which allows for modular, reusable, and maintainable code through concepts like classes, objects, inheritance, and polymorphism. 
+		
+Platform Independence: Java's "write once, run anywhere" philosophy is facilitated by the JVM, enabling Java code to execute on various operating 			systems without modification. 
 
+Robust: Java programs are designed to be robust, meaning they are less prone to crashes and errors due to features like automatic garbage collection, exception handling, and the absence of pointer arithmetic. 
+
+Security: Java's security features, including bytecode verification, help prevent malicious code from running on the JVM. 
+		
+Multithreaded: Java supports multithreading, allowing programs to execute multiple tasks concurrently, improving performance and responsiveness. 
+
+Architecture-Neutral: Java programs are designed to be architecture-neutral, meaning they can run on any hardware and operating system without 			      modification. 
+
+Interpreted: Java code is compiled into bytecode, which is then interpreted by the JVM, making it a platform-independent language. 
+
+Dynamic: Java is a dynamic language, meaning that it supports dynamic features like dynamic proxies and class loading. 
+
+High Performance: Java's just-in-time (JIT) compilation and garbage collection contribute to its high performance capabilities. 
+
+Distributed Computing: Java is designed to facilitate distributed computing, allowing programs to be built that can run across multiple networked 			computers. 
+
+Automatic Garbage Collection: Java automatically manages memory allocation and deallocation, preventing memory leaks and simplifying development. 
+		
+Rich API: Java provides a vast and versatile Application Programming Interface (API) with a wide range of functionalities for various tasks. 
+
+Simple and Easy to Learn: Java is known for its relatively simple syntax and easy-to-learn structure, making it a popular choice for beginners. 
+
+ 
+ Lab Exercise:
+
+Q1. Install JDK and set up environment variables.
+ANS :  	Download Java 21 setup from browser and install it on system using it.
+  	To set environment variables search in start menu "Advanced System Settings" in that click on "Environment Variables" and select "system 	variable"->"Path"->new 	and enter variable name "java-path" and add path. And if already exist then select variable and click on Edit 		button and add new path.
+
+
+Q2. Write a simple "Hello World" Java program. 
+ANS: In Eclipse IDE Create new Simple Java Project, And in that in src directory create new package called com.tcs and in this package create new class called  HelloWorld.
 	OR
-
-	In Notepad Create Simple .Java file and Write Code for HelloWorld Program As below.
+In Notepad Create Simple .Java file and Write Code for HelloWorld Program As below.
 
 Code :
-
 //This line is for Eclipse IDE
 package com.tcs;
-
 public class HelloWorld {
-	
 	public void display() {
 		System.out.println("Welcome Aakash!");
 	}
-
 	public static void main(String[] args) {
-	
-		
 		System.out.println("Hello World!");
-		
 		HelloWorld ob = new HelloWorld();
 		ob.display();
 	}
-
 }
 
-o Compile and run the program using command-line tools (javac, java).
+Q3. Compile and run the program using command-line tools (javac, java).
 ANS :
-
 C:\Users\shree\OneDrive\Desktop\Java_Programms>javac HelloWorld.java
-
 C:\Users\shree\OneDrive\Desktop\Java_Programms>java HelloWorld
 Hello World!
 Welcome Aakash!
