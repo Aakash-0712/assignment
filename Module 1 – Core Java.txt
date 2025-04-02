@@ -1,6 +1,6 @@
-Module 1 – Core Java
+											Module 1 – Core Java
 
-Assignment 1. Introduction to Java
+										Assignment 1. Introduction to Java
 
   Theory:
 Q1. History of Java
@@ -119,3 +119,314 @@ C:\Users\shree\OneDrive\Desktop\Java_Programms>javac HelloWorld.java
 C:\Users\shree\OneDrive\Desktop\Java_Programms>java HelloWorld
 Hello World!
 Welcome Aakash!
+
+
+								Assignment 2. Data Types, Variables, and Operators
+
+ Theory:
+
+Q1. Primitive Data Types in Java (int, float, char, etc.)
+ANS :The primitive data types in Java are Boolean, char, byte, int, short, long, float, and double. These are the basic building blocks of data manipulation in Java. 
+
+Boolean : A primitive data type that can only have two values: true or false It is like a yes/no or on/off
+Int : A primitive data type that stores a 32-bit signed integer. It is more memory-efficient and faster to access compared to Integer
+Float : A primitive data type that represents single-precision 32-bit floating-point numbers. It is typically used to store numbers with decimal points
+Double : A primitive data type that specifies a 64-bit floating-point number. It can store values up to 15 digits in length
+Char : An unsigned primitive data type that can hold positive or negative values. It is represented by the class java.lang.Character
+Long : A wrapper class in Java that is used for handling long integer data. It is the object representation of the primitive data type long
+
+Primitive data type characteristics : 
+	They are the building blocks of data manipulation
+	They cannot be further divided into simpler data types
+	They are in-built or predefined in Java
+
+
+
+Q2. Variable Declaration and Initialization
+ANS : In Java, variable declaration specifies the variable's name and data type, while initialization assigns a value to it. You can declare and initialize a variable                   in a single statement or separately. 
+
+Here's a breakdown:
+
+1. Declaration:
+
+Purpose: Tells the compiler about the variable's name and the type of data it will hold (e.g., int, String, boolean).
+Syntax: dataType variableName;
+Example: int age; (declares a variable named age that can store an integer) 
+
+2. Initialization:
+
+Purpose: Assigns an initial value to the declared variable.
+Syntax: dataType variableName = initialValue;
+Example: int age = 30; (declares and initializes age to 30) 
+
+3. Combined Declaration and Initialization:
+You can combine declaration and initialization into a single statement.
+Example: String name = "Alice"; (declares a variable named name of type String and initializes it to "Alice") 
+
+Q3. Operators: Arithmetic, Relational, Logical, Assignment, Unary, and Bitwise
+ANS : In Java, operators are symbols that perform operations on operands (values or variables). Java supports various operator types, including arithmetic, relational, logical, bitwise, assignment, unary, and conditional (ternary) operators. 
+
+Here's a breakdown of the different types of operators in Java:
+
+Arithmetic Operators:
+Used for performing mathematical operations: 
++ (addition) 
+- (subtraction) 
+* (multiplication) 
+/ (division) 
+% (modulus/remainder) 
+
+Relational Operators:
+Used to compare two values and return a boolean result (true or false): 
+== (equal to) 
+!= (not equal to) 
+> (greater than) 
+< (less than) 
+>= (greater than or equal to) 
+<= (less than or equal to) 
+
+Logical Operators:
+Used to perform logical operations on boolean expressions: 
+&& (logical AND) 
+|| (logical OR) 
+! (logical NOT) 
+
+Bitwise Operators:
+Used to perform bit-level operations on integers: 
+& (bitwise AND) 
+| (bitwise OR) 
+^ (bitwise XOR) 
+~ (bitwise NOT/complement) 
+<< (left shift) 
+>> (right shift) 
+>>> (unsigned right shift) 
+
+Assignment Operators:
+Used to assign values to variables: 
+= (assignment) 
++= (addition assignment) 
+-= (subtraction assignment) 
+*= (multiplication assignment) 
+/= (division assignment) 
+%= (modulus assignment) 
+
+Unary Operators:
+Used to perform operations on a single operand: 
+++ (increment) 
+-- (decrement) 
++ (unary plus) 
+- (unary minus) 
+
+Conditional (Ternary) Operator:
+Used to evaluate a condition and return one of two values: 
+	condition ? true value:false value 
+
+Q4. Type Conversion and Type Casting
+ANS : Type conversion is a process in which the data type is automatically converted into another data type. The compiler does this automatic conversion at compile time. The data type to which the conversion happens is called the destination data type, and the data type from which the conversion happens is called the source data type. If the source and destination data types are compatible, then automatic type conversion takes place.
+	For type conversion to take place, the destination data type must be larger than the source type. In short, the below flow chart has to be followed.
+Flow chart for Type Conversion : BOOLEAN->SHORT->INT->LONG->FLOAT->DOUBLE
+	This type of type conversion is also called Widening Type Conversion/ Implicit Conversion/ Casting Down.  In this case, as the lower data types with smaller sizes are converted into higher ones with a larger size, there is no chance of data loss. This makes it safe for usage.
+
+
+ Lab Exercise:
+o Write a program to demonstrate the use of different data types. 
+o Create a calculator using arithmetic and relational operators. 
+o Demonstrate type casting (explicit and implicit).
+
+
+									Assignment 3. Control Flow Statements
+
+ Theory:
+
+
+Q1. If-Else Statements
+ANS : 
+
+
+1. Java if (if-then) Statement
+The syntax of an if-then statement is:
+
+if (condition) {
+  // statements
+}
+Here, condition is a boolean expression such as age >= 18.
+
+if condition evaluates to true, the lines of code inside if are executed
+if condition evaluates to false, the lines of code inside if are skipped
+
+
+2. Java if...else (if-then-else) Statement : The if statement executes a certain section of code if the test expression is evaluated to true. However, if the test 					     expression is evaluated to false, it does nothing.
+
+					     In this case, we can use an optional else block. Statements inside the body of else block are executed if the test 					     expression is evaluated to false. This is known as the if-...else statement in Java.
+
+The syntax of the if...else statement is:
+
+if (condition) {
+  // codes in if block
+}
+else {
+  // codes in else block
+}
+Here, the program will do one task (codes inside if block) if the condition is true and another task (codes inside else block) if the condition is false.
+
+3. Java if...else...if Statement : In Java, we have an if...else...if ladder, that can be used to execute one block of code among multiple other blocks.
+
+if (condition1) {
+  // codes
+}
+else if(condition2) {
+  // codes
+}
+else if (condition3) {
+  // codes
+}
+.
+.
+else {
+  // codes
+}
+Here, if statements are executed from the top towards the bottom. When the test condition is true, codes inside the body of that if block is executed. And, program control jumps outside the if...else...if ladder.
+
+If all test expressions are false, codes inside the body of else are executed.
+
+
+
+	
+Q2. Switch Case Statements
+
+Q3. Loops (For, While, Do-While)
+ANS :	In Java, loops are classified as either entry-controlled or exit-controlled based on when the condition for continuation is checked: entry-controlled loops (like for and while) check the condition before executing the loop body, while exit-controlled loops (like do-while) check the condition after executing the loop body. 
+
+
+There are two types of loops :1.Entry Control Loops  2.Exit Control Loops
+1.Entry Control Loop : For , While 
+2.Exit Control Loop : Do-While
+
+
+Entry-Controlled Loops:
+Condition Check: The condition is evaluated before the loop body is executed.
+Loop Execution: The loop body might not execute at all if the initial condition is false.
+Examples:
+for loop
+while loop
+Syntax (example): 
+Java:
+    while (condition) {
+        // Code to be executed
+    }
+
+Java:
+    for (int i = 0; i < 10; i++) {
+        // Code to be executed
+    }
+
+Exit-Controlled Loops:
+Condition Check: The condition is evaluated after the loop body is executed.
+Loop Execution: The loop body executes at least once, regardless of the initial condition.
+Example:
+do-while loop
+Syntax (example): 
+Java
+
+    do {
+        // Code to be executed
+    } while (condition);
+
+
+
+Q4. Break and Continue Keywords 
+
+
+ Lab Exercise:
+Q1 .Write a program to find if a number is even or odd using an if-else statement. 
+ANS:
+CODE :
+package com.tcs;
+import java.util.Scanner;
+public class EvenOddNumber {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("Enter the number :");
+		
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		
+		if(n%2==0) {
+			System.out.println("Number is Even");
+		}else {
+			System.out.println("Number is Odd");
+		}
+	}
+
+}
+
+OUTPUT :
+//
+First output:
+Enter the number :
+3
+Number is Odd
+
+//
+Second output :
+Enter the number :
+
+4
+Number is Even
+
+Q3. Implement a simple menu-driven program using a switch-case. 
+Q4. Write a program to display the Fibonacci series using a loop.
+
+
+								Assignment 16. Java Input/Output (I/O) 
+ Theory:
+o Streams in Java (InputStream, OutputStream)
+o Reading and Writing Data Using Streams
+o Handling File I/O Operations 
+
+ Lab Exercise:
+Q1. Write a program to read input from the console using Scanner. 
+ANS :
+
+package com.tcs;
+
+import java.util.Scanner;
+
+public class GreatestNumber {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		System.out.println("Enter Two Number :");
+
+		Scanner sc = new Scanner(System.in);
+
+		int m = sc.nextInt();
+		int n = sc.nextInt();
+		
+		if(m > n) {
+			System.out.println("Greatest Number is "+m);
+		}else if(m < n) {
+			System.out.println("Greatest Number is "+n);
+		}
+		
+		System.out.println("Enter Third Number :");
+		int l = sc.nextInt();
+		
+		if(m>n && m>l) {
+			System.out.println("Greatest Numner is :"+m);
+			
+		}else if(n>m && n>l) {
+			System.out.println("Greatest Number is :"+n);
+			
+		}else if(l>m && l>n) {
+			System.out.println("Greatest Number is :"+l);
+		}
+				
+	}
+
+}
+
+o Implement a file copy program using FileInputStream and FileOutputStream. 
+o Create a program that reads from one file and writes the content to another file.
